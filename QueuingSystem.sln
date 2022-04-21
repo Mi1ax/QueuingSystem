@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueuingSystem", "QueuingSystem\QueuingSystem.csproj", "{3A4E0985-11D3-4D97-B8B9-132CFE9EB2CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "vendor\Mynad\Core\Core.csproj", "{B9D52B2E-CCA2-429F-9637-95F849415321}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{3A4E0985-11D3-4D97-B8B9-132CFE9EB2CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A4E0985-11D3-4D97-B8B9-132CFE9EB2CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A4E0985-11D3-4D97-B8B9-132CFE9EB2CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9D52B2E-CCA2-429F-9637-95F849415321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9D52B2E-CCA2-429F-9637-95F849415321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9D52B2E-CCA2-429F-9637-95F849415321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9D52B2E-CCA2-429F-9637-95F849415321}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
