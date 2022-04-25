@@ -25,16 +25,21 @@ namespace QueuingSystem
                 _belt.AddConveyor(Direction.East, new Conveyor());
                 _belt.AddConveyor(Direction.East, new Conveyor());
                 _belt.AddConveyor(Direction.East, new Conveyor());
+                _belt.AddConveyor(Direction.South, new Conveyor());
+                _belt.AddConveyor(Direction.South, new Conveyor());
+                _belt.AddItem(new Item());
             }
             
             protected override void Update(float deltaTime)
             {
                 _grid.Update(deltaTime);
+                _belt.Update(deltaTime);
             }
 
             protected override void Draw()
             {
                 _grid.Draw();
+                _belt.Draw();
             }
         }
         

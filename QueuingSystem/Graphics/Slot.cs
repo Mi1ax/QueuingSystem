@@ -4,17 +4,15 @@ namespace QueuingSystem.Graphics
 {
     public class Slot
     {
-        private Direction _side;
-
-        public Direction Side
+        public Item? Item
         {
-            get => _side;
-            set => _side = value;
+            get;
+            set;
         }
         
         public Slot()
         {
-            
+            Item = null;
         }
 
         public void Update(float deltaTime)

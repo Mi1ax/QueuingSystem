@@ -7,6 +7,7 @@ namespace QueuingSystem.Graphics.Buildings
 {
     public class ConveyorBelt : IBuildable
     {
+        private readonly List<Vector2> _path;
         private readonly Dictionary<Direction, Conveyor> _conveyors;
         private readonly Grid _grid;
         private int _conveyorCount;
@@ -32,6 +33,8 @@ namespace QueuingSystem.Graphics.Buildings
             _grid.Build(_conveyors.First().Value, gridPosition ?? Vector2.Zero);
             _inputSlot = new Slot();
             _outputSlot = new Slot();
+
+            _path = new List<Vector2>();
         }
 
         public void AddConveyor(Direction direction, Conveyor conveyor)
@@ -43,19 +46,26 @@ namespace QueuingSystem.Graphics.Buildings
             );
             _conveyors.Add(direction, conveyor);
             _grid.Build(conveyor, position);
+            _path.Add(conveyor.PositionOnScreen);
+        }
+
+        public void AddItem(Item item)
+        {
+            _inputSlot.Item = item;
+            _inputSlot.Item.Position = _conveyors.First().Value.PositionOnScreen;
         }
         
         public void Update(float deltaTime)
         {
-            
+            if (_inputSlot.Item != null)
+            {
+                
+            }
         }
 
         public void Draw()
         {
-            foreach (var (_, conveyor) in _conveyors)
-            {
-                conveyor.Draw();
-            }
+            _inputSlot.Item?.Draw();
         }
     }
 }
